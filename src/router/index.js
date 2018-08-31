@@ -15,6 +15,8 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
+  linkExactActiveClass:"checked",
+  /*base: '/elean/',*/
   routes,
   //模拟滚动行为,页面之间切换回到原位置
   scrollBehavior (to, from, savedPosition) {
@@ -38,6 +40,12 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   Vue.nextTick(() => {
     store.dispatch('startLoading')
+    if(to.name=="elean-home"){
+      store.dispatch('topShow')
+    }else {
+      store.dispatch('topHide')
+    }
+
   })
   next()
 })

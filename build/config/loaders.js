@@ -23,24 +23,11 @@ function postcssPlugins() {
 
 export default [
   {
-    enforce: 'pre',
-    test: /\.(vue|js)$/,
-    exclude: /node_modules/,
-    use: [{
-      loader: 'eslint-loader',
-      options: {
-        failOnError: true,
-        cache: true,
-        emitWarning: true,
-        formatter: eslintFriendlyFormatter
-      }
-    }]
-  }, {
     test: /\.vue$/,
     exclude: /node_modules/,
     use: {
       loader: 'vue-loader'
-    }   
+    }
   }, { //模块规则
     test: /\.js$/, //匹配文件
     exclude: /node_modules/, //排除node_modules
@@ -70,7 +57,7 @@ export default [
     use: [{
       loader: 'file-loader',
       options:{
-        name: '[name]_[sha512:hash:base64:7].[ext]'
+        name: 'images/[name]_[sha512:hash:base64:7].[ext]'
       }
     }]
   }

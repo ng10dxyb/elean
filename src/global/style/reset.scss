@@ -1,115 +1,221 @@
+/*
+* @Author: yangbo
+* @Date:   2018-04-11 11:54:51
+* @Last Modified by:   yangbo
+* @Last Modified time: 2018-08-15 17:58:13
+*/
+html, body {
+  color: #7B7A78;
+  background: #fff;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, form, th, td {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+}
+
+body, button, input, select, textarea {
+  font: 14px/1.5 "helvetica", "arial","Pingfang",'PingFang SC', "Hiragino Sans GB", "Microsoft Yahei", "STHeiti", "sans-serif";
+}
+
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+code, kbd, pre, samp, tt {
+  font-family: "Courier New", Courier, monospace;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul, ol,li {
+  list-style: none;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
 /**
- * 样式重置，全局性的样式问题请一定要放在这里
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 
- html, body {
-  height: 100%;
-  user-select: none;
-  -webkit-touch-callout: none;
-  // -webkit-overflow-scrolling: touch;
-  text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
 }
 
-body {
-  margin: 0 auto;
-  font-family: PingFang SC,Helvetica Neue,Hiragino Sans GB,Helvetica,Microsoft YaHei,Arial;
-  max-width: 720px;
-  font-size: 14px;
-  line-height: 1.5;
-  background-color: #F1F1F1;
-  transition: 2s background-color;
-  color: #212121;
-}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, pre, button, input, select, textarea, th, td, iframe{
-  margin: 0;
-  padding: 0;
-}
-
-ul, ol {
-  list-style: none outside none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
-
-a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
-  text-decoration: none;
-  color: inherit;
-  outline: none;
-}
-
-a:active, a:hover {
-  outline: none;
-  text-decoration: none;
-}
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-img {
-  border: none;
-  vertical-align: middle;
-}
-
-pre {
-  overflow: auto;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
 
 i {
   font-style: normal;
 }
 
-button, input, optgroup, select, textarea {
-  color: inherit;
-  font: inherit;
-  vertical-align: middle;
-  appearance: none;
-  border: none;
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #212121;
+  outline: 0 none;
+}
+
+
+a:focus, input:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
 }
 
-textarea {
-  overflow: auto;
-  resize: none;
+
+
+abbr[title], acronym[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
-  // color: #BDBDBD;
+q:before, q:after {
+  content: '';
 }
+
+legend {
+  color: #000;
+}
+
+fieldset, img {
+  border: none;
+}
+
+button, input, select, textarea, label {
+  font-size: 100%;
+  vertical-align: middle;
+  outline: 0;
+}
+
+textarea {
+  resize: none !important;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table th {
+  text-align: left;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  *color: #fff;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  outline: none;
+  vertical-align: middle;
+}
+div {
+  outline: none;
+}
+
+
+input[type="button"],
+input[type="submit"] {
+  border: 0 none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #bdbdbd;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #bdbdbd;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #bdbdbd;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #bdbdbd;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block
+}
+

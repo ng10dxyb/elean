@@ -1,23 +1,25 @@
-/*
-* @Author: chenchao
-* @Date: 2018-08-21 14:35:59
-* @Email: chenchao3@sh.superjia.com
- * @Last Modified by: chenchao
- * @Last Modified time: 2018-08-25 12:48:01
-*/
+
 <template>
   <div id="app" class="app">
-    <m-loading :load="load"></m-loading>
+    <!--头部-->
+    <el-header></el-header>
+    <!--<m-loading :load="load"></m-loading>-->
     <router-view></router-view>
+    <!--头部-->
+    <el-footer></el-footer>
   </div>
 </template>
 
 <script>
-import Loading from './components/loading'
+/*import Loading from './components/loading'*/
+import header from './components/header'
+import footer from './components/footer'
 export default {
   name: 'app',
   components: {
-    [Loading.name]: Loading
+    /*[Loading.name]: Loading,*/
+    [header.name]: header,
+    [footer.name]: footer
   },
   computed: {
     load() {
@@ -30,6 +32,6 @@ export default {
 <style lang="scss">
   @import './global/style/color';
   .app {
-    height: 100%;
+    min-width: 1400px;
   }
 </style>

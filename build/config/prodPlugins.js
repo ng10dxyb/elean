@@ -1,7 +1,7 @@
 /*
- * @Author:  chenchao 
- * @Date:  2018-08-22 13:11:37 
- * @email:  chenchao3.sh@superjia.com 
+ * @Author:  chenchao
+ * @Date:  2018-08-22 13:11:37
+ * @email:  chenchao3.sh@superjia.com
  * @Last Modified by: chenchao
  * @Last Modified time: 2018-08-22 15:38:51
  */
@@ -13,7 +13,7 @@ import ZipWebpackPlugin from 'zip-webpack-plugin'
 
 export default [
   new MiniCssExtractPlugin({
-    filename: '[name]_[contenthash:8].css'
+    filename: 'css/[name]_[contenthash:8].css'
   }),
   new OptimizeCssAssetsPlugin({  //css压缩去除注释
     cssProcessor: require('cssnano'),

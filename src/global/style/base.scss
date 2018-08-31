@@ -60,10 +60,7 @@
 .d-none{
   display: none;
 }
-.w100-h100 {
-  width: 100%;
-  height: 100%;
-}
+
 .flex {
   display: flex;
   &.center { //主轴侧轴居中
@@ -81,7 +78,7 @@
   }
   &.around {
     justify-content: space-around;
-  }  
+  }
   &.column { //主轴为垂直方向，起点在上沿
       flex-direction: column;
   }
@@ -104,4 +101,9 @@ $k: 4;
 @while $k >= 1 {
   .flex-#{$k} { flex: 1 * $k; }
   $k: $k - 1;
+}
+//版心
+.page{
+  width: 1300px;
+  margin: 0 auto;
 }

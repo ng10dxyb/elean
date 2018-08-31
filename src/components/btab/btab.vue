@@ -23,6 +23,9 @@ export default {
       itemList: []
     }
   },
+  created() {
+    console.log(this.itemList)
+  },
   methods: {
     tabItemCreated(item) {
       this.itemList.push(item)

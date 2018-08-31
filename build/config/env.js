@@ -1,10 +1,4 @@
-/*
-* @Author: chenchao
-* @Date: 2018-08-21 16:52:21
-* @Email: chenchao3@sh.superjia.com
-* @Last Modified by: chenchao
-* @Last Modified time: 2018-08-21 16:52:39
-*/
+
 import { argv } from 'yargs'; //可以拿到npm run命令中的字段
 
 // 环境：test|beta|prod，默认prod
@@ -15,12 +9,12 @@ export const envConfig = {
         publicPath: '/'
     },
     test: {
-        publicPath: '//www.chenchaoc.top/w4-test/'
+        publicPath: '//www.yangboff.cn/'
     },
     beta: {
-        publicPath: '//www.chenchaoc.top/w4-beta/'
+        publicPath: '//www.yangboff.cn/'
     },
     prod: {
-        publicPath: '//www.chenchaoc.top/w4-prod/'
+        publicPath: '//www.yangboff.cn/'
     }
 }[envName]

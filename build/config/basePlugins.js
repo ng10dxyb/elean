@@ -39,7 +39,7 @@ export default [
     common: 'common'
   }),
   new HtmlWebpackPlugin({  //自动生成html文件并载入打包后的css js
-    title: '无忧宝',
+    title: '宜联打印',
     filename: 'index.html',
     template: 'app.html',
     inject: 'body',  //默认插入body底部 选项：true, body, head, false

@@ -22,8 +22,8 @@ export default {
   output: {
     path: `${process.cwd()}/dist`,
     publicPath: envConfig.publicPath,
-    filename: '[name]_[hash:8].js',
-    //chunkFilename: '[name][id].js'
+    filename: 'js/[name]_[hash:8].js',
+    /*chunkFilename: '[name][id].js'*/
   },
   resolve: {
     extensions: [".js", ".vue", ".css", ".scss"],
