@@ -1,0 +1,109 @@
+.color-base {
+  color: #3b82f3 !important;
+}
+
+.color-ff {
+  color: #ffffff !important;
+}
+.color-21 {
+  color: #212121 !important;
+}
+.color-75 {
+  color: #757575 !important;
+}
+
+.bg-c-ff {
+  background-color: #fff !important;
+}
+/* 清除浮动 */
+.clearfix {
+  &:before, &:after {
+      content: '';
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+.f-l{
+  float: left;
+}
+
+.f-r{
+  float: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-center{
+  text-align: center;
+}
+/*超过长度省略号*/
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.d-i-b{
+  display: inline-block;
+}
+.d-show {
+  display: block;
+}
+.d-none{
+  display: none;
+}
+
+.flex {
+  display: flex;
+  &.center { //主轴侧轴居中
+      align-items: center;
+      justify-content: center;
+  }
+  &.center-v { //侧轴居中
+      align-items: center;
+  }
+  &.center-h { //主轴居中
+      justify-content: center;
+  }
+  &.between { //主轴两端对齐
+      justify-content: space-between;
+  }
+  &.around {
+    justify-content: space-around;
+  }
+  &.column { //主轴为垂直方向，起点在上沿
+      flex-direction: column;
+  }
+  &.row { ////换行，第一行在上方
+      flex-wrap: row;
+  }
+}
+//字体加粗
+.fw-b {
+  font-weight: bold;
+}
+$i: 30;
+$k: 4;
+//字体大小  10 - 30
+@while $i >= 10 {
+  .f-#{$i} { font-size: 1px * $i; }
+  $i: $i - 2;
+}
+// flex  1 - 4
+@while $k >= 1 {
+  .flex-#{$k} { flex: 1 * $k; }
+  $k: $k - 1;
+}
+//版心
+.page{
+  width: 1300px;
+  margin: 0 auto;
+}
